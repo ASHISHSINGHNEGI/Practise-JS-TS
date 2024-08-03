@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selection</title>
+  </head>
+  <body>
+    <label for="course">Couse : </label>
+    <select name="" id="course">
+      <option value="">select the option</option>
+      <option value="mca">mca</option>
+      <option value="btech">Btech</option>
+      <option value="mtech">mtech</option>
+      <option value="phd">PhD</option>
+    </select>
+    <p id="selectedCourse"></p>
+    <script>
+      const course = document.querySelector("select");
+      const text = document.querySelector("p");
+
+      function setCourse() {
+        text.textContent= course.value;
+      }
+      course.addEventListener("change", setCourse);
+
+    </script>
+  </body>
+</html>
